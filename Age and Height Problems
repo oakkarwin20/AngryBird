@@ -1,0 +1,40 @@
+﻿using System;
+
+namespace Conditions_with_Brackeys
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int age;
+            int heightInFeet;
+            int heightInInches;
+
+            Console.Write("Please input your age.");
+            age = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Please input your height in Feet.");
+            heightInFeet = Convert.ToInt32(Console.ReadLine() );
+
+            Console.Write($"Please input your height in Inches.");
+            heightInInches = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write($"Your age is {age} and your height is {heightInFeet}'{heightInInches}.");
+
+            if (age >= 18 && heightInFeet >= 5)
+            {
+                Console.Write("You may enter the rollarcoaster");
+            }
+
+            else if (age >= 18 && heightInFeet < 5)
+            {
+                Console.Write("You are too short for this ride shorty.");
+            }
+
+            else
+            {
+                Console.Write("Unfortunately you are not old enough for this ride.");
+            }
+        }
+    }
+}
